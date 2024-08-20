@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".profile.EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:padding="@dimen/half_common_margin"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytFullName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:hint="Full name"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="text"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Username"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytFullName"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="text"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Password"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytUsername"
+        app:passwordToggleEnabled="true"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Email"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytUsername"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Phone number"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytEmail"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="phone"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/dr_white_circle"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_top"
+        android:src="@drawable/ic_arrow_forward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytPhone"
+        tools:ignore="ContentDescription" />
+
+    <!--<com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:backgroundTint="@color/green_primary_dark"
+        android:text="Update"
+        android:textColor="@color/yellow_primary"
+        tools:ignore="HardcodedText" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

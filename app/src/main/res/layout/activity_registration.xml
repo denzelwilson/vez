@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".auth.RegistrationActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:text="@string/app_name"
+        android:fontFamily="@font/nexa_bold"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:text="Create \nAccount"
+        android:textColor="@color/dark_text"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppName"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytFullName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:hint="Full name"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Username"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytFullName"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Password"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytUsername"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/light_text"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Email"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytPassword"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="Phone number"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytEmail"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/double_common_margin"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:text="Gender"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/dark_text"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytPhone"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/genderBtnGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tvGender"
+        app:layout_constraintStart_toEndOf="@id/tvGender"
+        app:layout_constraintTop_toTopOf="@id/tvGender"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMale"
+            style="@style/Widget.Button.Group.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:paddingHorizontal="@dimen/common_margin"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingVertical="@dimen/half_common_margin"
+            android:text="Male"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFemale"
+            style="@style/Widget.Button.Group.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:button="@android:color/transparent"
+            android:text="Female"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:text="Sign Up"
+        android:textColor="@color/dark_text"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnRegister"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/dr_white_circle"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_top"
+        android:src="@drawable/ic_arrow_forward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderBtnGroup"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

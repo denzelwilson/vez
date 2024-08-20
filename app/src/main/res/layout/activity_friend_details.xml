@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".friends.FriendDetailsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".6" />
+
+    <ImageView
+        android:id="@+id/imgProfileFull"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_no_img"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-20dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="@dimen/common_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:src="@drawable/img_no_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_margin"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Connect"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgProfile"
+                tools:text="Mohammed Mashood" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginTop="@dimen/half_common_margin"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="mashood" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_margin">16dp</dimen>
+    <dimen name="half_common_margin">8dp</dimen>
+    <dimen name="quarter_common_margin">4dp</dimen>
+    <dimen name="double_common_margin">32dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_large">64dp</dimen>
+    <dimen name="recycler_padding_top">84dp</dimen>
+</resources>

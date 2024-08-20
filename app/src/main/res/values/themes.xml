@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FriendFinder" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_background</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_text</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">#5C5C5C</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+    <!--<style name="Theme.FriendFinder" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        &lt;!&ndash; Primary brand color. &ndash;&gt;
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+        <item name="colorSecondary">@color/yellow_secondary</item>
+        <item name="colorSecondaryVariant">@color/yellow_primary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        &lt;!&ndash; Status bar color. &ndash;&gt;
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>-->
+
+    <style name="Theme.FriendFinder.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_background</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_text</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">#5C5C5C</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="Theme.FriendFinder.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_friends_100</item>
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_friends_100</item>-->
+        <item name="postSplashScreenTheme">@style/Theme.FriendFinder.NoActionBar</item>
+        <item name="windowSplashScreenBackground">@color/black</item>
+    </style>
+
+    <style name="Widget.Button.Group.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/button_group_icon_state</item>
+        <item name="android:textColor">@color/button_group_text_state</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="elevation">0dp</item>
+    </style>
+</resources>

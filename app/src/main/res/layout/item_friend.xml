@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/half_common_margin"
+    android:layout_marginVertical="@dimen/quarter_common_margin"
+    android:backgroundTint="@color/grey_background"
+    app:cardCornerRadius="@dimen/quarter_common_margin"
+    app:cardElevation="@dimen/quarter_common_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/half_common_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/img_no_img" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="John Snow" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/quarter_common_margin"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/light_text"
+                android:textSize="16sp"
+                tools:text="john" />
+
+            <LinearLayout
+                android:id="@+id/lytButtonControls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/quarter_common_margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Reject"
+                    app:cornerRadius="@dimen/common_margin"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAccept"
+                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/quarter_common_margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Accept"
+                    app:cornerRadius="@dimen/common_margin"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChat"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/quarter_common_margin"
+                android:layout_marginTop="@dimen/margin_top"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="@dimen/double_common_margin"
+                android:text="Chat"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/common_margin"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

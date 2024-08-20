@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".settings.PrivacyActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:padding="@dimen/half_common_margin"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:text="Privacy"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:text="Enable location service"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switchLocation"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:checked="true"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

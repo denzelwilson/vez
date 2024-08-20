@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">vez</string>
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="title_activity_nearby_friends">NearbyFriendsActivity</string>
+</resources>

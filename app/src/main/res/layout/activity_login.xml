@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".auth.LoginActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:fontFamily="@font/nexa_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_large"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Welcome \nBack"
+        android:textColor="@color/dark_text"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppName"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_large"
+        android:hint="Username"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="text"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:hint="Password"
+        android:textColorHint="@color/light_text"
+        app:hintTextColor="@color/light_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytUsername"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/light_text"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="textPassword"
+            android:textColor="@color/dark_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Sign In"
+        android:textColor="@color/dark_text"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnLogin"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/dr_white_circle"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_top"
+        android:src="@drawable/ic_arrow_forward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lytPassword"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/double_common_margin"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingVertical="@dimen/half_common_margin"
+        android:text="@string/sign_up"
+        android:textColor="@color/dark_text"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

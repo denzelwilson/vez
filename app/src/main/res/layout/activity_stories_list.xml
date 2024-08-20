@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".story.StoriesListActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:elevation="10dp"
+        android:padding="@dimen/half_common_margin"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="@dimen/double_common_margin"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_bold"
+                android:paddingHorizontal="@dimen/common_margin"
+                android:paddingTop="@dimen/half_common_margin"
+                android:paddingBottom="@dimen/margin_top"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_common_margin"
+        android:elevation="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Discovery"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/cardApp"
+        app:layout_constraintStart_toStartOf="@id/cardApp"
+        app:layout_constraintTop_toBottomOf="@id/cardApp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/half_common_margin"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/recycler_padding_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_story" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

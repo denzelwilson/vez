@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_friends_100"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_friends_100"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FriendFinder.Splash"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".story.MyStoriesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".story.StoryUploadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".story.StoriesListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".friends.FriendDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".settings.SecurityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".settings.PrivacyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".profile.EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".home.MapActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".friends.FriendRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".friends.FriendsListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".dashboard.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".auth.PhotoUploadActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".auth.RegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FriendFinder.NoActionBar" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA5ylGnoNT6OdlN1b5bfpeQGyZns-HIrJg" />
+
+        <service
+            android:name=".common.LocationService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>
